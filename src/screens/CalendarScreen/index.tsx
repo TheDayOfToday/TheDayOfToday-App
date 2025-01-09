@@ -1,10 +1,24 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
+import { Calendar } from 'react-native-calendars';
 
 const CalendarScreen = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>캘린더 화면</Text>
+    <View>
+      <Calendar
+        // 초기에 보이는 달. 기본값 = Date()
+        current={'2025-01-01'}
+        // 날짜를 눌렀을 때 처리하는 콜백 함수
+        onDayPress={(day: any) => {
+          console.log('선택된 날', day);
+        }}
+        // 월 형식을 표시할지 여부
+        monthFormat={'yyyy MM'}
+        // 월 페이지에 다른 달의 날짜를 보여주지 않음
+        hideExtraDays={true}
+        // firstDay=1이면 주는 월요일부터 시작.
+        firstDay={1}
+      />
     </View>
   );
 };
@@ -14,12 +28,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#f5f5f5',
-  },
-  text: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#333',
   },
 });
 
