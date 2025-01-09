@@ -16,13 +16,6 @@ buildscript {
         classpath("com.facebook.react:react-native-gradle-plugin")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin")
     }
-    configurations.all {
-        resolutionStrategy {
-            force 'androidx.core:core:1.9.0' // 강제로 androidx 버전 사용
-            exclude group: 'com.android.support', module: 'support-compat'
-        }
-    }
-
 }
 
 apply plugin: "com.facebook.react.rootproject"
