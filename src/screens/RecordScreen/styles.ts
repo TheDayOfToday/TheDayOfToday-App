@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-export const commonStyles = StyleSheet.create({
+export const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
@@ -12,4 +12,4 @@ export const commonStyles = StyleSheet.create({
         fontWeight: 'bold',
         color: '#333',
     },
-});
+    });
