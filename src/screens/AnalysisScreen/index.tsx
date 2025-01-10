@@ -1,31 +1,13 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text } from 'react-native';
+import { commonStyles } from '../../styles/common';
 
 const AnalysisScreen = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>분석 화면</Text>
+    <View style={commonStyles.container}>
+      <Text style={commonStyles.text}>분석 화면</Text>
     </View>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#f5f5f5',
-  },
-  text: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#333',
-  },
-});
-
 export default AnalysisScreen;
-
-
-
-
-
