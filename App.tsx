@@ -7,7 +7,6 @@ import LoginScreen from './src/screens/Auth/LoginScreen';
 import SignupScreen from './src/screens/Auth/SignupScreen';
 import NavigatorBar from './src/components/NavigatorBar';
 import HomeScreen from './src/screens/HomeScreen';
-import SettingScreen from './src/screens/SettingScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -35,14 +34,6 @@ function App() {
             <Stack.Screen name="MainTabs" component={NavigatorBar} />
             <Stack.Screen name="Login" component={LoginScreen} />
             <Stack.Screen name="Signup" component={SignupScreen} />
-            <Stack.Screen
-              name="Setting"
-              component={SettingScreen}
-              options={{
-                headerShown: true,
-                title: '설정',
-              }}
-            />
           </>
         )}
       </Stack.Navigator>
